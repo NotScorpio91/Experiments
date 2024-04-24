@@ -1,14 +1,14 @@
 import React from "react";
 
-import card_1 from "../assets/card_1.jpg";
-import card_2 from "../assets/card_2.jpg";
-import card_3 from "../assets/card_3.jpg";
-import card_4 from "../assets/card_4.jpg";
+import card_1 from "../assets/CardHover/card_1.jpg";
+import card_2 from "../assets/CardHover/card_2.jpg";
+import card_3 from "../assets/CardHover/card_3.jpg";
+import card_4 from "../assets/CardHover/card_4.jpg";
 
-import sm_card_1 from "../assets/sm_card_1.jpg";
-import sm_card_2 from "../assets/sm_card_2.jpg";
-import sm_card_3 from "../assets/sm_card_3.jpg";
-import sm_card_4 from "../assets/sm_card_4.jpg";
+import sm_card_1 from "../assets/CardHover/sm_card_1.jpg";
+import sm_card_2 from "../assets/CardHover/sm_card_2.jpg";
+import sm_card_3 from "../assets/CardHover/sm_card_3.jpg";
+import sm_card_4 from "../assets/CardHover/sm_card_4.jpg";
 
 function Card() {
   return (
