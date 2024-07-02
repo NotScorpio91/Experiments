@@ -2,7 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {
     Home,
+    Showcase,
 } from './pages/Index'
+
 
 function App() {
     return (
@@ -10,6 +12,7 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="" element={<Home />} />
+                    <Route path="/show-case" element={<Showcase />} />
                     {/* <Route path="/quote" element={<Quote />} />
                     <Route path="/hire-dev" element={<HireDev />} />
                     <Route path="/project" element={<Project />} />
