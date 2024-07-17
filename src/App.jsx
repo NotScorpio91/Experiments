@@ -2,7 +2,9 @@ import React from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import {
     Home,
-    Showcase,
+    List,
+    Image_Slider,
+    Hidden_image_hover_effect
 } from './pages/Index'
 
 
@@ -11,8 +13,10 @@ function App() {
         <div>
             <Router>
                 <Routes>
-                    <Route path="" element={<Home />} />
-                    <Route path="/show-case" element={<Showcase />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="/list" element={<List />} />
+                    <Route path="/3D-Image-Slider" element={<Image_Slider/>} />
+                    <Route path="/Hidden-image-hover-effect" element={<Hidden_image_hover_effect/>} />
                     {/* <Route path="/quote" element={<Quote />} />
                     <Route path="/hire-dev" element={<HireDev />} />
                     <Route path="/project" element={<Project />} />

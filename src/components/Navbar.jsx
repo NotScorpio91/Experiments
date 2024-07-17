@@ -10,7 +10,7 @@ function Navbar({}) {
     setShow(!show);
   };
   return (
-    <div className="flex py-4 xl:px-16 gap  xl:justify-around justify-between items-center w-full md:px-4  font-roboto relative">
+    <div className="flex py-4 xl:px-16 gap  xl:justify-around justify-between items-center w-full md:px-4  font-roboto relative fixed">
       <div className="flex justify-between items-center w-full px-4">
         <Link herf="/">
           <div className="w-fit p-2 flex justify-center items-center">
