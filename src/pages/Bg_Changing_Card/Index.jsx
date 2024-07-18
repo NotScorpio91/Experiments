@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import { IoMdColorFill } from "react-icons/io";
 import { GrClearOption } from "react-icons/gr";
+import { MdOutlineContentCopy } from "react-icons/md";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 
 function Index() {
   const [color, setColor] = useState("");
@@ -11,7 +15,18 @@ function Index() {
   const handleClearClick = () => {
     setColor("");
   };
-
+  const copyToClipboard = () => {
+    if (color !== "") {
+      navigator.clipboard
+        .writeText(color)
+        .then(() => {
+          toast.success(`Text copied to clipboard! ${color}`);
+        })
+        .catch((err) => {
+          console.error("Failed to copy text: ", err);
+        });
+    }
+  };
   return (
     <div className="app h-[100vh]">
       <div className="flex flex-col justify-center items-center h-full w-full gap-8">
@@ -38,18 +53,26 @@ function Index() {
               onChange={handleColorChange}
               value={color}
             />
-            <div className="relative">
-            <input
-              type="color"
-              id="input-group-1"
-              class=" text-sm rounded-lg  block  ps-10 p-2.5 h-full  bg-gray-500 border-gray-100 placeholder-gray-200 text-white  focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-2 focus:shadow-lg shadow-blue-500"
-              placeholder="Enter your color"
-              onChange={handleColorChange}
-              value={color}
-               style={{ backgroundColor: `${color}` }}
-            />
+            <div className="relative" title="Pick color">
+              <input
+                type="color"
+                id="input-group-1"
+                class=" text-sm rounded-lg  block  ps-10 p-2.5 h-full  bg-gray-500 border-gray-100 placeholder-gray-200 text-white  focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-2 focus:shadow-lg shadow-blue-500"
+                placeholder="Enter your color"
+                onChange={handleColorChange}
+                value={color}
+                style={{ backgroundColor: `${color}` }}
+              />
             </div>
             <button
+              title="Clear"
+              onClick={copyToClipboard}
+              className="text-sm rounded-lg  block  p-2.5  bg-gray-500 border-gray-100 placeholder-gray-200 text-white  focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-2 focus:shadow-lg shadow-blue-500"
+            >
+              <MdOutlineContentCopy size={20} />
+            </button>
+            <button
+              title="Clear"
               onClick={handleClearClick}
               className="text-sm rounded-lg  block  p-2.5  bg-gray-500 border-gray-100 placeholder-gray-200 text-white  focus:outline-none focus:ring-blue-500 focus:border-blue-500 border-2 focus:shadow-lg shadow-blue-500"
             >
@@ -58,6 +81,19 @@ function Index() {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition:Bounce
+      />
     </div>
   );
 }
