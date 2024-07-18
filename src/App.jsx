@@ -6,6 +6,11 @@ import {
   Image_Slider,
   Hidden_image_hover_effect,
   Bg_Changing_Card,
+  Todo,
+  // PageNotfound,
+  // Quote,
+  // HireDev,
+  // Project,
 } from "./pages/Index";
 
 function App() {
@@ -20,7 +25,8 @@ function App() {
             path="/Hidden-image-hover-effect"
             element={<Hidden_image_hover_effect />}
           />
-          <Route path="/Bg_Changing_Card" element={<Bg_Changing_Card />} />
+          <Route path="/color-picker" element={<Bg_Changing_Card />} />
+          <Route path="/todo" element={<Todo />} />
           {/* <Route path="/quote" element={<Quote />} />
                     <Route path="/hire-dev" element={<HireDev />} />
                     <Route path="/project" element={<Project />} />
