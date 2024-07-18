@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.css";
+// import "./index.css";
 
 import card_1 from "./Images/card_1.jpg";
 import card_2 from "./Images/card_2.jpg";
