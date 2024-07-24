@@ -10,7 +10,8 @@ function Navbar({}) {
     setShow(!show);
   };
   return (
-    <div className="flex py-4 xl:px-16 gap  xl:justify-around justify-between items-center w-full md:px-4  font-roboto relative fixed">
+    <div className="flex justify-center">    
+    <div className="flex py-4 xl:px-16 gap  xl:justify-around justify-between items-center w-full 2xl:w-[1903px] md:px-4  font-roboto fixed">
       <div className="flex justify-between items-center w-full px-4">
         <Link herf="/">
           <div className="w-fit p-2 flex justify-center items-center">
@@ -45,31 +46,28 @@ function Navbar({}) {
       <div className="md:flex gap-5 hidden relative">
         <Link herf="/">
           <div className="relative group">
-            <div className="absolute -inset-0.5 group-hover:bg-sky-300 group-hover:rounded-md group-hover:blur-[30px]  hidden group-hover:block group-hover:transition-all ease-in duration-300"></div>
-            <span className="relative text-base font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
+            <span className="relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
               Home
             </span>
           </div>
         </Link>
         <div className="relative group">
-          <div className="absolute -inset-0.5 group-hover:bg-sky-300 group-hover:rounded-md group-hover:blur-[30px]  hidden group-hover:block group-hover:transition-all ease-in duration-300"></div>
-          <span className="relative text-base font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
+          <span className="relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
             About
           </span>
         </div>
         <div className="relative group">
-          <div className="absolute -inset-0.5 group-hover:bg-sky-300 group-hover:rounded-md group-hover:blur-[30px]  hidden group-hover:block group-hover:transition-all ease-in duration-300"></div>
-          <span className="relative text-base font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
+          <span className="relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
             List
           </span>
         </div>
         <div className="relative group">
-          <div className="absolute -inset-0.5 group-hover:bg-sky-300 group-hover:rounded-md group-hover:blur-[30px]  hidden group-hover:block group-hover:transition-all ease-in duration-300"></div>
-          <span className="relative text-base font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
+          <span className="relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ">
             Projects
           </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }

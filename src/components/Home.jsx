@@ -17,7 +17,7 @@ function Home() {
     const text = "notscorpio91@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
-    // toast.success("Email is Copied!");
+    toast.success("Email is Copied!");
     setTimeout(() => setCopied(false), 2000);
   };
   return (

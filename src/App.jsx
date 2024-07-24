@@ -7,7 +7,8 @@ import {
   Hidden_image_hover_effect,
   Bg_Changing_Card,
   Todo,
-  // PageNotfound,
+  ImageSlider,
+  PageNotfound,
   // Quote,
   // HireDev,
   // Project,
@@ -27,14 +28,9 @@ function App() {
           />
           <Route path="/color-picker" element={<Bg_Changing_Card />} />
           <Route path="/todo" element={<Todo />} />
-          {/* <Route path="/quote" element={<Quote />} />
-                    <Route path="/hire-dev" element={<HireDev />} />
-                    <Route path="/project" element={<Project />} />
-                    <Route path="/work/:slug" element={<ServicesPage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/career" element={<Career />} />
-                    <Route path="/career/:slug" element={<CareerForm/>} />
-                    <Route path="*" exact element={<PageNotfound />} /> */}
+          <Route path="/image-slider" element={<ImageSlider />} />
+          
+        <Route path="*" exact element={<PageNotfound />} /> 
         </Routes>
       </Router>
     </div>
