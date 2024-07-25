@@ -22,7 +22,7 @@ const Index = () => {
       img: theteksol,
       title: "The Teksol",
       about:
-        "Agency setup website",
+        "Agency website",
       icons: [
         <FaReact size={20} />,
         <TbBrandRedux size={20} />,
@@ -35,7 +35,7 @@ const Index = () => {
       img: teksol,
       title: "Space Teksol",
       about:
-        "Ppace theme portfolio",
+        "Space theme portfolio",
       icons: [
         <FaReact size={20} />,
         <TbBrandRedux size={20} />,
@@ -102,7 +102,7 @@ const Index = () => {
         )}
           
         </div>
-        <div className="flex justify-around items-center space-x-1 rounded-xl bg-gradient-to-r from-[#00c6ff] to-[#92EFFD] p-1 min-w-[320px] ">
+        <div className="flex justify-around items-center space-x-1 rounded-xl bg-gradient-to-r from-[#00c6ff] to-[#92EFFD] p-1 w-full sm:w-[320px] ">
           <div
             className={`w-full rounded-lg py-3 text-sm font-medium leading-5 text-white flex justify-center items-center   gap-1 cursor-pointer  ${
               activeTab === "ncj"

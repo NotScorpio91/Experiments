@@ -13,7 +13,7 @@ function Navbar() {
   };
 
   const isActive = (path) => {
-    return location.pathname === path ? "text-sky-400 " : "text-white";
+    return location.pathname === path ? "text-sky-400 " : "text-gray-950";
   };
 
   return (
@@ -32,17 +32,21 @@ function Navbar() {
           {show ? (
             <IoCloseSharp onClick={handleClick} className="md:hidden block" />
           ) : (
-            <RxHamburgerMenu onClick={handleClick} className="md:hidden block" />
+            <RxHamburgerMenu
+              onClick={handleClick}
+              className="md:hidden block"
+            />
           )}
         </div>
+
         <div
-          className={`md:hidden absolute bg-black w-full h-screen top-[75px] text-white p-4 flex flex-col items-start gap-16 ${
+          className={`md:hidden absolute backdrop-blur-lg w-full bg-gray-50/70 h-screen top-[69px] p-4 flex flex-col items-start gap-8 ${
             show ? "black" : "hidden"
           }`}
         >
           <Link to="/" onClick={handleClick}>
             <span
-              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-700 hover:bg-blue-700 rounded ${isActive(
+              className={`relative text-base font-medium w-full  cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-200 shadow-lg text-black hover:bg-blue-700 rounded ${isActive(
                 "/"
               )}`}
             >
@@ -51,25 +55,16 @@ function Navbar() {
           </Link>
           <Link to="/about" onClick={handleClick}>
             <span
-              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-700 hover:bg-blue-700 rounded ${isActive(
+              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-200 shadow-lg text-black hover:bg-blue-700 rounded ${isActive(
                 "/about"
               )}`}
             >
               About
             </span>
           </Link>
-          <Link to="/list" onClick={handleClick}>
-            <span
-              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-700 hover:bg-blue-700 rounded ${isActive(
-                "/list"
-              )}`}
-            >
-              List
-            </span>
-          </Link>
           <Link to="/projects" onClick={handleClick}>
             <span
-              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-700 hover:bg-blue-700 rounded ${isActive(
+              className={`relative text-base font-medium w-full cursor-pointer group-hover:transition-all block py-2 px-3 bg-gray-200 shadow-lg text-black hover:bg-blue-700 rounded ${isActive(
                 "/projects"
               )}`}
             >
@@ -77,11 +72,12 @@ function Navbar() {
             </span>
           </Link>
         </div>
-        <div className="md:flex gap-5 hidden relative">
+
+        <div className="md:flex gap-5 hidden relative ">
           <Link to="/">
             <div className="relative group">
               <span
-                className={`relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ${isActive(
+                className={`relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all  ${isActive(
                   "/"
                 )}`}
               >
@@ -103,7 +99,7 @@ function Navbar() {
           <Link to="/projects">
             <div className="relative group">
               <span
-                className={`relative text-base hover:font-medium group-hover:text-sky-400 cursor-pointer group-hover:transition-all ${isActive(
+                className={`relative text-base hover:font-medium  group-hover:text-sky-400 cursor-pointer group-hover:transition-all ${isActive(
                   "/projects"
                 )}`}
               >
