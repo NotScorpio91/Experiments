@@ -1,0 +1,155 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --gradient-color: linear-gradient(
+    90deg,
+    hsl(193.4, 100%, 50%) 0%,
+    hsl(187.9, 96.4%, 78.2%, 100%)
+  );
+  --black-color: hsl(220, 13.04%, 90.98%);
+  --reflection-color: hsl(48, 30%, 95%, 0.3);
+  --body-color: hsl(48, 100%, 98%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 1rem;
+}
+
+/*=============== BASE ===============*/
+
+a {
+  text-decoration: none;
+}
+
+/*=============== BUTTON ===============*/
+.container {
+  
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.button__content {
+  position: relative;
+  background: var(--gradient-color);
+  padding: 0.5rem 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--black-color);
+  color: var(--black-color);
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  overflow: hidden;
+}
+
+.button__text {
+  font-weight: 700;
+}
+
+.button__icon {
+  font-size: 1.5rem;
+}
+
+.button__text,
+.button__icon {
+  position: relative;
+  z-index: 2;
+}
+
+/* Reflection shapes */
+.button__reflection-1,
+.button__reflection-2 {
+  width: 8px;
+  height: 120px;
+  background-color: var(--reflection-color);
+  rotate: 30deg;
+  position: absolute;
+  inset: 0;
+  top: 0;
+  left: -200%;
+  margin: auto;
+  transition: left 0.6s cubic-bezier(0.2, 0.5, 0.2, 1.2);
+}
+
+.button__reflection-1::after {
+  content: "";
+  width: 26px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: 1.25rem;
+}
+
+.button__reflection-2::after {
+  content: "";
+  width: 40px;
+  height: 100%;
+  background-color: var(--reflection-color);
+  position: absolute;
+  top: -1rem;
+  left: 0.8rem;
+}
+
+/* View shadow gradient */
+.button:hover .button__shadow {
+  transform: translate(-0.5rem, 0.5rem);
+}
+
+/* Move reflection */
+.button:hover .button__reflection-1 {
+  left: 120%;
+}
+
+.button:hover .button__reflection-2 {
+  left: -70%;
+}
+
+/* View geometric shapes */
+
+.button:hover img {
+  opacity: 1;
+}
+
+.button::before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #00c6ff, #92EFFD, #00c6ff, #92EFFD,
+      #00c6ff, #92EFFD, #00c6ff, #92EFFD
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 600%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height:  calc(100% + 4px);
+    filter: blur(8px);
+    animation: glowing 30s linear infinite;
+    transition: opacity .7s ease-in-out;
+    border-radius: 10px;
+    opacity: 0;
+  }
+  
+  @keyframes glowing {
+    0% {background-position: 0 0;}
+    50% {background-position: 400% 0;}
+    100% {background-position: 0 0;}
+  }
+  
+  /* hover */
+  .button:hover::before {
+    opacity: 1;
+  }
+  
+  

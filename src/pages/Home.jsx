@@ -6,7 +6,7 @@ import { FaGithub, FaDiscord, FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdOutlineWeb } from "react-icons/md";
 import { Link } from "react-router-dom";
-import Button from "../components/EmailButton";
+import Button from "../components/CustomButtons/3dButton/index";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, toast } from "react-toastify";
 import Tooltip from "../components/Tooltip";
@@ -44,7 +44,7 @@ function Home() {
                 LET&#39;S BUILD SOMETHING TOGETHER
               </p>
               <h1 className="py-2 text-gray-700 text-6xl font-bold">
-                Hi, I&#39;m <span className="text-sky-700"> Scorpio</span>
+                Hi, I&#39;m <span className="bg-gradient-to-r from-[#00c6ff] to-[#92EFFD]  text-transparent bg-clip-text antialiased"> Scorpio</span>
               </h1>
               <h1 className="py-2 text-gray-700 text-6xl font-bold">
                 A Front-End Web Developer
@@ -53,6 +53,11 @@ function Home() {
                 I’m focused on building responsive front-end web applications
                 integrating back-end technologies.
               </p>
+              <Link to='/projects'>
+              <div className="my-14">
+              <Button />
+              </div>
+              </Link>
               <div className="flex items-center justify-between max-w-[330px] m-auto py-4">
                 <Tooltip position="top" content="Github">
                   <a href="https://github.com/NotScorpio91" target="_blank">

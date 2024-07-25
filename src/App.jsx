@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import {
   Home,
+  Projects,
   List,
   Image_Slider,
   Hidden_image_hover_effect,
@@ -20,6 +21,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/list" element={<List />} />
           <Route path="/3D-Image-Slider" element={<Image_Slider />} />
           <Route

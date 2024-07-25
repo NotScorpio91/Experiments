@@ -1,4 +1,6 @@
 import bg from "../assets/pnf.png";
+import Button from '../components/CustomButtons/BgGlowingButton/index';
+
 
 export default function Pnf() {
   const bgImage = {
@@ -29,7 +31,7 @@ export default function Pnf() {
           <div className="blur-[106px] h-36 bg-gradient-to-t from-gray-500 to-gray-50 "></div>
         </div>
         <div className="text-center relative bottom-52 sm:bottom-60">
-          <p className="relative top-9 text-transparent bg-clip-text antialiased font-poppins text-8xl bg-gradient-to-r from-[#00c6ff] to-[#92EFFD] font-bold">
+          <p className="relative top-9 text-transparent bg-clip-text antialiased  text-8xl bg-gradient-to-r from-[#00c6ff] to-[#92EFFD] font-bold">
             404
           </p>
           <h1 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-xl relative top-3 uppercase">
@@ -41,9 +43,9 @@ export default function Pnf() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <a
               href="/"
-              className="text-gray-700 ease-in duration-150 transition-all  hover:font-medium rounded-md text-sm px-[30px] py-3 text-center  font-poppins antialiased transition-all active:scale-95 bg-gradient-to-r from-[#00c6ff] to-[#92EFFD]"
             >
-              Go back home
+             
+            <Button />
             </a>
           </div>
         </div>
