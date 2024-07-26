@@ -1,5 +1,5 @@
 export { default as Home } from './Home';
-export { default as List } from '../Layouts/SideBar';
+export { default as About } from '../pages/About';
 export { default as Projects } from '../pages/Projects/index';
 export { default as Image_Slider } from './3D Image Slider/Index';
 export { default as Hidden_image_hover_effect } from './Hidden_image_hover_effect/Index';
