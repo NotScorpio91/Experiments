@@ -31,8 +31,8 @@ function App() {
           <Route path="/color-picker" element={<Bg_Changing_Card />} />
           <Route path="/todo" element={<Todo />} />
           <Route path="/image-slider" element={<ImageSlider />} />
-          
-        <Route path="*" exact element={<PageNotfound />} /> 
+
+          <Route path="*" exact element={<PageNotfound />} />
         </Routes>
       </Router>
     </div>
