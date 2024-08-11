@@ -27,7 +27,7 @@ function index({png='',title='title', about='about', icons=[], link=''}) {
                 </div>
               ))}
             </div>
-            <a href={link} target="main">
+            <a href={link} target="blank">
               <div className="mt-3">
                 <Button title=" Check Live Site" />
               </div>

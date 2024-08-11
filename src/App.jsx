@@ -10,6 +10,7 @@ import {
   Todo,
   ImageSlider,
   PageNotfound,
+  Image_3D_Hover_Effect
   // Quote,
   // HireDev,
   // Project,
@@ -27,6 +28,10 @@ function App() {
           <Route
             path="/Hidden-image-hover-effect"
             element={<Hidden_image_hover_effect />}
+          />
+          <Route
+            path="/Image_3D_Hover_Effect"
+            element={<Image_3D_Hover_Effect />}
           />
           <Route path="/color-picker" element={<Bg_Changing_Card />} />
           <Route path="/todo" element={<Todo />} />

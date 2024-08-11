@@ -14,6 +14,7 @@ import { SiTailwindcss } from "react-icons/si";
 import { TbBrandFramerMotion } from "react-icons/tb";
 import { FaBootstrap } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io5";
+import  Image3DHoverEffect  from "../../assets/Custom/Image_3D _Hover_Effect.png";
 
 const Index = () => {
   const [activeTab, setActiveTab] = useState("ncj");
@@ -65,7 +66,7 @@ const Index = () => {
   const items = [
     {
       img: cards,
-      title: "3d Cards",
+      title: "3d Rotating Cards",
       about:
         "",
       icons: [
@@ -74,6 +75,18 @@ const Index = () => {
         <SiTailwindcss size={20} />,
       ],
       link: "/3D-Image-Slider",
+    },
+    {
+      img: Image3DHoverEffect,
+      title: "Image 3D Hover Effect",
+      about:
+        "",
+      icons: [
+        <FaReact size={20} />,
+        <IoLogoCss3 size={20} />,
+        <SiTailwindcss size={20} />,
+      ],
+      link: "Image_3D_Hover_Effect",
     },
     {
       img: colorpicker,
